@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>no of working days</th>
+        <th>total amount</th>
+    </tr>
+    {% for i in t %}
+    <tr>
+        <td>{{i.no_of_working_days}}</td>
+        <td>{{i.total_amount}}</td>
+        <td><a href="" class="btn btn-primary btn=sm">proceed to pay</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

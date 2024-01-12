@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+  </html>
+<body>
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Phone</th>
+      <th>Licence</th>
+      <th>Duration</th>
+      <th>Availability</th>
+    </tr>
+    {% for i in r %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.salary}}</td>
+        <td>{{i.phone}}</td>
+        <td><img src="{{i.licence.url}}" height="50px" width="50px"></td>
+        <td>{{i.duration}}</td>
+        <td>{{i.select}}</td>
+        <td><a href="/send_req/{{i.name}}" class="btn btn-primary btn=sm">choose</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+<!--<input type="text" name="n1" value="{{i.id}}" hidden>-->

@@ -1,0 +1,56 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+  	<title>Signora</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{% static 'afeed/css/style.css' %}">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">User Feedback</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-dark">
+						  <thead>
+						    <tr class="bg-dark">
+						      <th>Worker name</th>
+						      <th>Feedback</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						  {% for i in r %}
+						    <tr class="bg-primary">
+						      <th scope="row">{{i.wname}}</th>
+						      <td>{{i.feed}}</td>
+						    </tr>
+								{% endfor %}
+
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'afeed/js/jquery.min.js' %}"></script>
+  <script src="{% static 'afeed/js/popper.js' %}"></script>
+  <script src="{% static 'afeed/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'afeed/js/main.js' %}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+  </html>
+<body>
+<table>
+  <tr>
+    <th>Name</th>
+<!--    <th>Job Name</th>-->
+<!--    <th>BOB</th>-->
+    <th>Salary</th>
+    <th>Phone</th>
+    <th>Licence</th>
+    <th>Duration</th>
+    <th>Availability</th>
+  </tr>
+  {% for i in r %}
+<!--  <form action="i" method="POST">-->
+<!--    {% csrf_token %}-->
+    <tr>
+      <td>{{i.name}}</td>
+      <td>{{i.salary}}</td>
+      <td>{{i.phone}}</td>
+      <td><img src="{{i.licence.url}}" height="50px" width="50px"</td>
+      <td>{{i.duration}}</td>
+      <td>{{i.select}}</td>
+<!--       <form action="#" method="POST">-->
+<!--         {% csrf_token %}-->
+<!--       <input type="text" name="n1" value="{{i.id}}" hidden>-->
+        <td><input type="submit" value="approve"></td>
+<!--       </form>-->
+  </tr>
+
+  {% endfor %}
+</table>
+</body>
+</html>

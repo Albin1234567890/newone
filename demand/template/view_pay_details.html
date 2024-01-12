@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>no working days</th>
+        <th>total amount</th>
+    </tr>
+    {% for i in t %}
+    <tr>
+        <td>{{i.no_of_working_days}}</td>
+        <td>{{i.total_amount}</td>
+        <td><a href="" class="btn btn-primary btn=sm">proced to pay</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

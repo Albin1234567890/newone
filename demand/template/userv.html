@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<h1>request view</h1>
+<body>
+<table>
+    <tr>
+        <th>worker name</th>
+        <th>user name</th>
+    </tr>
+    {% for i in t %}
+    <tr>
+        <td>{{i.worker_name}}</td>
+        <td>{{i.user_name}}</td>
+        <td><a href="view_accept_request" class="btn btn-primary btn=sm">accept</a></td>
+        <td><a href="reject_accept_request" class="btn btn-primary btn=sm">reject</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

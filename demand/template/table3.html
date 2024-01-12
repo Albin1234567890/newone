@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+  </html>
+<body>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>E-mail</th>
+  </tr>
+  {% for i in r %}
+    <tr>
+    <td>{{i.name}}</td>
+      <td>{{i.email}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
